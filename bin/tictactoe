@@ -74,19 +74,21 @@ end
     o_record = 0
     draw = 0
     counter = 0
+
     100.times do
-      if counter.even?
+      # if counter.even?
         game = Game.new(player_1 = Players::Computer.new('X'), player_2 = Players::Computer.new("O"), board = Board.new)
-      else
-        game = Game.new(player_1 = Players::Computer.new('O'), player_2 = Players::Computer.new("X"), board = Board.new)
-      end
+      # else
+        # game = Game.new(player_1 = Players::Computer.new('O'), player_2 = Players::Computer.new("X"), board = Board.new)
+      # end
         game.play
 
       if game.winner == 'X'
+        binding.pry
         x_record += 1
       elsif game.winner == 'O'
         o_record += 1
-      elsif game.winner != 'X' && game.winner != 'O'
+      elsif game.draw?
         draw += 1
       end
 
@@ -100,13 +102,15 @@ end
 
   end
 
-  puts "Would you like to play again?"
-  puts "Enter '1' to play again, or '2' to quit"
 
-  reload = gets.strip.upcase
+    puts "Would you like to play again?"
+    puts "Enter '1' to play again, or '2' to quit"
 
-  if reload == '2'
-    puts "Goodbye!"
-  end
+    reload = gets.strip.upcase
 
-end     
+    if reload == '2'
+      puts "Goodbye!"
+    end
+
+
+end
