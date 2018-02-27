@@ -3,9 +3,9 @@
 require_relative '../config/environment'
 
 
-reload = '1'
+reload = '2'
 
-until reload == '2' do
+until reload == '1' do
 
   game = ""
   game_type_input = ""
