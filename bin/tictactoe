@@ -83,11 +83,14 @@ end
       # end
         game.play
 
-      if game.winner == 'X'
-        binding.pry
-        x_record += 1
-      elsif game.winner == 'O'
-        o_record += 1
+
+      if game.draw?
+        draw += 1
+      elsif game.won? 
+        if game.winner == 'X'
+          x_record += 1
+        elsif game.winner == 'O'
+          o_record += 1
       elsif game.draw?
         draw += 1
       end
