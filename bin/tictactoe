@@ -86,13 +86,12 @@ end
 
       if game.draw?
         draw += 1
-      elsif game.won? 
+      elsif game.won?
         if game.winner == 'X'
           x_record += 1
         elsif game.winner == 'O'
           o_record += 1
-      elsif game.draw?
-        draw += 1
+        end 
       end
 
       counter += 1
