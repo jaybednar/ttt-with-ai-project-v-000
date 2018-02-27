@@ -91,7 +91,7 @@ end
           x_record += 1
         elsif game.winner == 'O'
           o_record += 1
-        end 
+        end
       end
 
       counter += 1
@@ -106,7 +106,7 @@ end
 
 
     puts "Would you like to play again?"
-    puts "Enter '1' to play again, or '2' to quit"
+    puts "Enter '1' to quit, press any other key to play again"
 
     reload = gets.strip.upcase
 
