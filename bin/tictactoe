@@ -104,7 +104,7 @@ end
 
   end
 
-
+  
     puts "Would you like to play again?"
     puts "Enter '1' to quit, press any other key to play again"
 
