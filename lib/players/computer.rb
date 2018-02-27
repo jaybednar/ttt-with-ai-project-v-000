@@ -18,7 +18,7 @@ module Players
         end
         open_positions = @positions.collect.with_index{|pos, i| i if pos == " "} - [nil]
         taken_positions = @positions.collect.with_index{|pos, i| i if pos != " "} - [nil]
-        @move_ind = open_positions.sample
+        # @move_ind = open_positions.sample
 
         if self.game.board.turn_count == 0
           @move_ind = corners.first
